@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Notepad.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.EntityFrameworkCore;
 
 namespace Notepad
 {
@@ -42,6 +44,20 @@ namespace Notepad
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
             NoteText.Clear();
+        }
+
+        private void btnSaveToDatabase_Click(object sender, RoutedEventArgs e)
+        {
+            using (var ctxNotes = new NotesContext())
+            {
+                ctxNotes.Notes.Add(new Model.Note
+                {
+                    Note1 = NoteText.Text,
+                    CreatedOn= DateTime.Now,
+                });
+                ctxNotes.SaveChanges();
+            }
+
         }
     }
 }

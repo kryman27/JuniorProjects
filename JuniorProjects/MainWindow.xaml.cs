@@ -23,10 +23,14 @@ namespace JuniorProjects
         public MainWindow()
         {
             InitializeComponent();
-            var rand = new Random();
-            rand.Next()
+            tbScreen.Text = String.Empty;
+            
         }
 
-        
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            tbScreen.Text.Concat("1");
+            
+        }
     }
 }

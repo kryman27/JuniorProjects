@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JuniorProjects", "JuniorProjects\JuniorProjects.csproj", "{6BCDFA25-AA47-4D67-8B4F-8F904DEE56FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalc", "JuniorProjects\SimpleCalc.csproj", "{6BCDFA25-AA47-4D67-8B4F-8F904DEE56FB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notepad", "Notepad\Notepad.csproj", "{92DC9AB0-0448-49A8-8706-6E88FC489EC6}"
 EndProject
