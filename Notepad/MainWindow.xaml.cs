@@ -56,8 +56,25 @@ namespace Notepad
                     CreatedOn= DateTime.Now,
                 });
                 ctxNotes.SaveChanges();
+                var resOfAdd = true;
+                
+                if(resOfAdd == true)
+                {
+                    MessageBox.Show("Note stored to DB sucesfully");
+                }
+                else if(resOfAdd == false)
+                {
+                    MessageBox.Show("Somethin wrong happened! Note was not stored!");
+                }
+                NoteText.Clear();
             }
 
+        }
+
+        private void ShowNotes_Click(object sender, RoutedEventArgs e)
+        {
+            NotesList listOfNotes = new NotesList();
+            listOfNotes.Show();
         }
     }
 }

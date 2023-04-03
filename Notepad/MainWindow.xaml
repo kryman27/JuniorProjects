@@ -10,7 +10,7 @@
         <TextBox x:Name="NoteText" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Enter your thoughts here..." VerticalAlignment="Top" Width="380" Height="200" GotFocus="NoteText_GotFocus" AcceptsReturn="True"/>
         <Button x:Name="SaveToFile" Content="Save to File" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="Save_Click"/>
         <Button x:Name="Clear" Content="Clear" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Width="60" Height="25" Click="Clear_Click"/>
-        <Button x:Name="ShowNotes" Content="Show notes" HorizontalAlignment="Left" Margin="292,240,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
+        <Button x:Name="ShowNotes" Content="Show notes" HorizontalAlignment="Left" Margin="292,240,0,0" VerticalAlignment="Top" Width="75" Height="25" Click="ShowNotes_Click"/>
         <Button x:Name="btnSaveToDatabase" Content="Save to Database" HorizontalAlignment="Left" Margin="10,280,0,0" VerticalAlignment="Top" Width="120" Click="btnSaveToDatabase_Click"/>
 
     </Grid>
