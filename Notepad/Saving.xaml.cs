@@ -44,7 +44,7 @@ namespace Notepad
             Close();
         }
 
-        private void btnChooseFir_Click(object sender, RoutedEventArgs e)
+        private void btnChooseDir_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new SaveFileDialog();
             dialog.FileName = "file";
@@ -53,17 +53,8 @@ namespace Notepad
 
             if(dialog.ShowDialog() == true)
             {
-                //FilePath = dialog.FileName;
                 Path.Text = dialog.FileName;
-            }
-
-            //bool? result = dialog.ShowDialog();
-            //if (result == true)
-            //{
-            //    string filename = dialog.FileName;
-            //    FilePath = filename;
-            //}
-            
+            }    
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
