@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace Notepad
 {
@@ -21,6 +22,7 @@ namespace Notepad
     public partial class Saving : Window
     {
         public string Text { get; set; }
+        public string FilePath { get; set; }
         public Saving(string text)
         {
             InitializeComponent();
@@ -35,11 +37,40 @@ namespace Notepad
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             string noteText = Text;
-            string filePath = Path.Text;
+            FilePath = Path.Text;
 
-            File.WriteAllText(filePath, noteText);
+            File.WriteAllText(FilePath, noteText);
 
             Close();
         }
+
+        private void btnChooseFir_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new SaveFileDialog();
+            dialog.FileName = "file";
+            dialog.DefaultExt = ".txt";
+            dialog.Filter = "Text documents (.txt) | *.txt";
+
+            if(dialog.ShowDialog() == true)
+            {
+                //FilePath = dialog.FileName;
+                Path.Text = dialog.FileName;
+            }
+
+            //bool? result = dialog.ShowDialog();
+            //if (result == true)
+            //{
+            //    string filename = dialog.FileName;
+            //    FilePath = filename;
+            //}
+            
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        
     }
 }

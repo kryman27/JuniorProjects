@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Notepad"
         mc:Ignorable="d"
-        Title="Saving" Height="80" Width="450">
+        Title="Saving" Height="124" Width="450">
     <Grid>
         <Label x:Name="PathLbl" Content="Path:" HorizontalAlignment="Left" Margin="7,6,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="Path" HorizontalAlignment="Left" Margin="48,10,0,0" TextWrapping="Wrap" Text="Enter path here..." VerticalAlignment="Top" Width="250" GotFocus="Path_GotFocus"/>
         <Button x:Name="Save" Content="Save" HorizontalAlignment="Left" Margin="320,8,0,0" VerticalAlignment="Top" Width="70" Height="30" Click="Save_Click"/>
+        <Button x:Name="btnChooseFir" Content="Choose directory" HorizontalAlignment="Left" Margin="320,44,0,0" VerticalAlignment="Top" Width="108" Height="30" Click="btnChooseFir_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="48,49,0,0" VerticalAlignment="Top" Click="btnCancel_Click"/>
 
     </Grid>
 </Window>
